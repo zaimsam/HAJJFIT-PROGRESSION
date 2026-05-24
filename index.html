@@ -1,13 +1,11 @@
-# Advanced HAJJFIT Dashboard (Single File)
-
-Copy ALL code below and replace your current `index.html` content.
-
-```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>HAJJFIT Research Dashboard</title>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -21,21 +19,21 @@ Copy ALL code below and replace your current `index.html` content.
     }
 
     body{
-      font-family: Arial, sans-serif;
+      font-family:Arial, sans-serif;
       background:#020617;
       color:white;
       overflow-x:hidden;
     }
 
-    .background-glow{
+    .glow{
       position:fixed;
-      width:600px;
-      height:600px;
+      width:500px;
+      height:500px;
       background:#0ea5e9;
       filter:blur(180px);
-      opacity:0.15;
-      top:-200px;
-      right:-200px;
+      opacity:0.12;
+      top:-150px;
+      right:-150px;
       z-index:-1;
     }
 
@@ -54,25 +52,24 @@ Copy ALL code below and replace your current `index.html` content.
     .hero h1{
       font-size:60px;
       color:#38bdf8;
-      margin-bottom:15px;
-      letter-spacing:2px;
+      margin-bottom:20px;
     }
 
     .hero p{
       color:#cbd5e1;
-      font-size:20px;
       line-height:1.8;
+      font-size:18px;
     }
 
     .glass{
       background:rgba(255,255,255,0.05);
       border:1px solid rgba(255,255,255,0.08);
       border-radius:25px;
-      backdrop-filter: blur(12px);
-      box-shadow:0 10px 40px rgba(0,0,0,0.35);
+      backdrop-filter:blur(12px);
+      box-shadow:0 10px 35px rgba(0,0,0,0.35);
     }
 
-    .grid-4{
+    .grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
       gap:25px;
@@ -81,35 +78,23 @@ Copy ALL code below and replace your current `index.html` content.
 
     .card{
       padding:30px;
-      transition:0.3s;
     }
 
-    .card:hover{
-      transform:translateY(-5px);
-    }
-
-    .card h3{
+    .card h2{
       color:#38bdf8;
       margin-bottom:15px;
-      font-size:22px;
     }
 
     .big-number{
-      font-size:50px;
+      font-size:48px;
       font-weight:bold;
       margin-bottom:10px;
     }
 
-    .subtext{
-      color:#cbd5e1;
-      line-height:1.7;
-    }
-
     .section-title{
-      font-size:34px;
       color:#38bdf8;
+      font-size:32px;
       margin-bottom:25px;
-      margin-top:20px;
     }
 
     .progress-box{
@@ -125,7 +110,6 @@ Copy ALL code below and replace your current `index.html` content.
       display:flex;
       justify-content:space-between;
       margin-bottom:10px;
-      font-size:18px;
     }
 
     .progress-bar{
@@ -138,8 +122,8 @@ Copy ALL code below and replace your current `index.html` content.
 
     .progress-fill{
       height:100%;
-      border-radius:20px;
       background:linear-gradient(to right,#0ea5e9,#38bdf8);
+      border-radius:20px;
     }
 
     table{
@@ -233,9 +217,20 @@ Copy ALL code below and replace your current `index.html` content.
       margin-bottom:8px;
     }
 
+    .button{
+      display:inline-block;
+      background:#0ea5e9;
+      color:white;
+      padding:14px 25px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:bold;
+      margin-top:20px;
+    }
+
     .footer{
       text-align:center;
-      margin-top:60px;
+      margin-top:50px;
       padding:30px;
       color:#94a3b8;
     }
@@ -246,21 +241,19 @@ Copy ALL code below and replace your current `index.html` content.
         font-size:38px;
       }
 
-      .hero p{
-        font-size:16px;
-      }
-
       .section-title{
-        font-size:28px;
+        font-size:26px;
       }
 
     }
 
   </style>
+
 </head>
+
 <body>
 
-<div class="background-glow"></div>
+<div class="glow"></div>
 
 <div class="container">
 
@@ -284,30 +277,30 @@ Copy ALL code below and replace your current `index.html` content.
 
   </section>
 
-  <section class="grid-4">
+  <section class="grid">
 
     <div class="glass card">
-      <h3>Overall Progress</h3>
+      <h2>Overall Progress</h2>
       <div class="big-number">68%</div>
-      <div class="subtext">Research progression and dashboard development</div>
+      <p>Research progression and dashboard development</p>
     </div>
 
     <div class="glass card">
-      <h3>Study Dataset</h3>
+      <h2>Study Dataset</h2>
       <div class="big-number">2022–2026</div>
-      <div class="subtext">SIHAT Hajj Health Records Database</div>
+      <p>SIHAT Hajj Database</p>
     </div>
 
     <div class="glass card">
-      <h3>ML Algorithms</h3>
+      <h2>ML Algorithms</h2>
       <div class="big-number">3</div>
-      <div class="subtext">Logistic Regression, Random Forest & XGBoost</div>
+      <p>LR, Random Forest & XGBoost</p>
     </div>
 
     <div class="glass card">
-      <h3>Target Outcome</h3>
+      <h2>Target Outcome</h2>
       <div class="big-number">AI</div>
-      <div class="subtext">Digital self-risk assessment system for pilgrims</div>
+      <p>Digital Self Risk Assessment</p>
     </div>
 
   </section>
@@ -340,7 +333,7 @@ Copy ALL code below and replace your current `index.html` content.
 
     <div class="progress-item">
       <div class="progress-label">
-        <span>Data Cleaning & Preparation</span>
+        <span>Data Cleaning</span>
         <span>65%</span>
       </div>
 
@@ -357,17 +350,6 @@ Copy ALL code below and replace your current `index.html` content.
 
       <div class="progress-bar">
         <div class="progress-fill" style="width:20%"></div>
-      </div>
-    </div>
-
-    <div class="progress-item">
-      <div class="progress-label">
-        <span>Web-Based Tool Development</span>
-        <span>10%</span>
-      </div>
-
-      <div class="progress-bar">
-        <div class="progress-fill" style="width:10%"></div>
       </div>
     </div>
 
@@ -393,19 +375,19 @@ Copy ALL code below and replace your current `index.html` content.
 
       <tr>
         <td>Phase 2</td>
-        <td>Machine Learning Model Development</td>
+        <td>Machine Learning Development</td>
         <td class="status-pending">PENDING</td>
       </tr>
 
       <tr>
         <td>Phase 3</td>
-        <td>Digital Tool Development</td>
+        <td>Web-Based Tool Development</td>
         <td class="status-pending">PENDING</td>
       </tr>
 
       <tr>
         <td>Phase 4</td>
-        <td>Validation & Usability Assessment</td>
+        <td>Validation & Usability</td>
         <td class="status-pending">PENDING</td>
       </tr>
 
@@ -421,40 +403,6 @@ Copy ALL code below and replace your current `index.html` content.
 
   </section>
 
-  <section class="glass chart-box">
-
-    <h2 class="section-title">Machine Learning Algorithms</h2>
-
-    <table>
-
-      <tr>
-        <th>Algorithm</th>
-        <th>Purpose</th>
-        <th>Status</th>
-      </tr>
-
-      <tr>
-        <td>Logistic Regression</td>
-        <td>Baseline prediction model</td>
-        <td class="status-complete">READY</td>
-      </tr>
-
-      <tr>
-        <td>Random Forest</td>
-        <td>Non-linear pattern analysis</td>
-        <td class="status-progress">IN DEVELOPMENT</td>
-      </tr>
-
-      <tr>
-        <td>XGBoost</td>
-        <td>Advanced ensemble prediction</td>
-        <td class="status-progress">IN DEVELOPMENT</td>
-      </tr>
-
-    </table>
-
-  </section>
-
   <section>
 
     <h2 class="section-title">Research Supervisory Team</h2>
@@ -463,40 +411,33 @@ Copy ALL code below and replace your current `index.html` content.
 
       <div class="glass supervisor-card">
         <h3>Main Supervisor</h3>
+
         <p>
-          Associate Professor Dr. Nor Azwany Yaacob<br><br>
-          Department of Community Medicine<br>
-          School of Medical Sciences<br>
-          Universiti Sains Malaysia
+          Associate Professor Dr. Nor Azwany Yaacob
         </p>
       </div>
 
       <div class="glass supervisor-card">
         <h3>Co-Supervisor</h3>
+
         <p>
-          Dr. Wan Nor Arifin Wan Mansor<br><br>
-          Biostatistics & Research Methodology Unit<br>
-          School of Medical Sciences<br>
-          Universiti Sains Malaysia
+          Dr. Wan Nor Arifin Wan Mansor
         </p>
       </div>
 
       <div class="glass supervisor-card">
         <h3>Co-Supervisor</h3>
+
         <p>
-          Dr. Afiq Izuddin A. Rahim<br><br>
-          Department of Community Medicine<br>
-          School of Medical Sciences<br>
-          Universiti Sains Malaysia
+          Dr. Afiq Izuddin A. Rahim
         </p>
       </div>
 
       <div class="glass supervisor-card">
         <h3>Co-Researcher</h3>
+
         <p>
-          Ts. Dr. Zainab Ajab Mohideen<br><br>
-          School of Computer Sciences<br>
-          Universiti Sains Malaysia
+          Ts. Dr. Zainab Ajab Mohideen
         </p>
       </div>
 
@@ -512,29 +453,33 @@ Copy ALL code below and replace your current `index.html` content.
 
       <div class="timeline-item">
         <h4>Phase 1 — Epidemiological Analysis</h4>
+
         <p>
-          Secondary analysis of SIHAT Hajj database to determine incidence trend and associated factors of serious health events among Malaysian pilgrims.
+          Analysis of SIHAT database to determine incidence and associated factors of serious health events.
         </p>
       </div>
 
       <div class="timeline-item">
-        <h4>Phase 2 — Machine Learning Development</h4>
+        <h4>Phase 2 — Machine Learning Modelling</h4>
+
         <p>
-          Development and comparison of predictive models using Logistic Regression, Random Forest and XGBoost algorithms.
+          Development of predictive models using Logistic Regression, Random Forest and XGBoost.
         </p>
       </div>
 
       <div class="timeline-item">
         <h4>Phase 3 — Digital Tool Translation</h4>
+
         <p>
-          Translation of validated prediction model into a web-based digital self-risk assessment tool for pilgrims.
+          Development of web-based self-risk assessment system for Hajj pilgrims.
         </p>
       </div>
 
       <div class="timeline-item">
         <h4>Phase 4 — Validation & Usability</h4>
+
         <p>
-          Expert validation, face validation and usability testing among potential Hajj pilgrims.
+          Content validation, face validation and usability assessment among pilgrims.
         </p>
       </div>
 
@@ -542,8 +487,52 @@ Copy ALL code below and replace your current `index.html` content.
 
   </section>
 
+  <section class="glass progress-box">
+
+    <h2 class="section-title">Research Governance & Ethical Approval</h2>
+
+    <table>
+
+      <tr>
+        <th>Item</th>
+        <th>Status</th>
+        <th>Details</th>
+      </tr>
+
+      <tr>
+        <td>Ethical Approval</td>
+        <td class="status-complete">APPROVED</td>
+        <td>Human Research Ethics Committee (JEPeM)</td>
+      </tr>
+
+      <tr>
+        <td>Research Institution</td>
+        <td class="status-complete">USM</td>
+        <td>Universiti Sains Malaysia</td>
+      </tr>
+
+      <tr>
+        <td>Study Status</td>
+        <td class="status-progress">ACTIVE</td>
+        <td>Data Collection & Development Phase</td>
+      </tr>
+
+    </table>
+
+    <a href="documents/ethical_approval.pdf"
+       target="_blank"
+       class="button">
+
+       📄 View Ethical Approval Letter
+
+    </a>
+
+  </section>
+
   <div class="footer">
-    HAJJFIT Research Dashboard © 2026 | Universiti Sains Malaysia
+
+    HAJJFIT Dashboard © 2026 | Universiti Sains Malaysia
+
   </div>
 
 </div>
@@ -558,7 +547,7 @@ new Chart(ctx, {
         labels: ['2022', '2023', '2024', '2025', '2026'],
         datasets: [{
             label: 'Serious Health Events',
-            data: [120, 160, 210, 250, 290],
+            data: [120, 180, 210, 250, 320],
             borderWidth: 3,
             tension: 0.4
         }]
@@ -591,21 +580,3 @@ new Chart(ctx, {
 
 </body>
 </html>
-```
-
-# Cara Update Dalam GitHub
-
-1. Klik `index.html`
-2. Klik ikon ✏️ Edit
-3. Padam semua code lama
-4. Paste code baru ini
-5. Scroll bawah
-6. Klik `Commit changes`
-7. Tunggu 1-2 minit
-8. Refresh website GitHub Pages
-
-Link website:
-
-```text
-https://zaimsam.github.io/HAJJFIT-PROGRESSION/
-```
